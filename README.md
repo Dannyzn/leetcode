@@ -1,0 +1,54 @@
+# leetcode
+采用JavaScript 对数据结构和算法的学习
+
+1. 安装
+
+  ```
+  npm install --save-dev jest
+  npm install babel-jest babel-core@^7.0.0-bridge.0 @babel/core regenerator-runtime babel-preset-env
+  ```
+  编辑package.json
+
+  ```
+  {
+    "scripts": {
+      "test": "jest"
+    }
+  }
+  ```
+
+  编辑.babelrc
+  ```
+  {
+    "presets": ["env", "react"]
+  }
+  ```
+
+2. 创建js文件
+
+  ```js
+  function sum(a, b) {
+    return a + b;
+  }
+  export default sum;
+  ```
+
+  ```js
+  import sum from './index'
+
+  test('adds 1 + 2 to equal 3', () => {
+    expect(sum(1, 2)).toBe(3);
+  });
+  ```
+
+3. 启动测试
+
+  ```
+  npm test
+  ```
+
+4. 工具安装
+
+  - IDE：Atom
+  - 插件：[platformio-ide-terminal](https://github.com/platformio/platformio-atom-ide-terminal)
+
